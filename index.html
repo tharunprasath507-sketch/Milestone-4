@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Take a quick, three-question knowledge quiz.">
+    <title>Quizzical — Three-question challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="Quizzical home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span>quizzical<span class="brand-period">.</span></span>
+        </a>
+        <div class="header-note"><span class="status-dot" aria-hidden="true"></span> A little challenge, a lot of learning</div>
+      </header>
+
+      <main>
+        <section class="view welcome-view" id="welcome" aria-labelledby="welcome-title">
+          <div class="welcome-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> YOUR MOMENT TO SHINE</p>
+            <h1 id="welcome-title">Curiosity looks<br>good <span>on you.</span></h1>
+            <p class="intro">A quick little quiz to warm up your brain. Trust what you know, enjoy the moment, and see how you do.</p>
+            <div class="welcome-meta">
+              <span class="meta-icon" aria-hidden="true">✦</span>
+              <span><strong>3 questions</strong><span class="meta-divider">·</span>About 1 minute</span>
+            </div>
+            <button class="button button-primary" id="start" type="button">
+              Start the quiz <span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="quiet-note">No pressure. Just for fun.</p>
+          </div>
+          <div class="welcome-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="spark spark-one">✦</div>
+            <div class="spark spark-two">✧</div>
+            <div class="art-card">
+              <div class="art-card-top"><span class="mini-mark">q.</span><span class="art-pill">QUICK QUIZ</span></div>
+              <div class="art-question">Ready to put<br>your mind to it?</div>
+              <div class="art-options"><span></span><span></span><span></span></div>
+              <div class="art-card-bottom"><span>YOUR NEXT BRIGHT IDEA</span><span class="art-star">✦</span></div>
+            </div>
+            <div class="floating-note"><span class="floating-icon">✦</span><span>Trust your<br>first thought</span></div>
+          </div>
+        </section>
+
+        <section class="view quiz-view" id="quiz" aria-labelledby="question" hidden>
+          <div class="quiz-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE QUICK QUIZ</p>
+            <h1>A little brain<br><span>stretch.</span></h1>
+          </div>
+          <article class="question-card" aria-live="polite">
+            <div class="question-topline">
+              <span class="question-tag"><span class="tag-dot" aria-hidden="true"></span> YOUR QUESTION</span>
+              <span class="question-count" id="question-count">QUESTION 01 <span>/ 03</span></span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0" id="progress">
+              <span class="progress-fill" id="progress-fill"></span>
+            </div>
+            <h2 id="question"></h2>
+            <div class="answers" id="answers" aria-label="Answer choices"></div>
+            <div class="card-footer">
+              <p class="feedback" id="feedback" role="status" aria-live="polite">Choose the answer that feels right.</p>
+              <button class="button button-primary button-next" id="next" type="button" disabled>
+                Continue <span class="button-arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+          <p class="quiz-footnote"><span aria-hidden="true">✦</span> Take your time — there’s no rush.</p>
+        </section>
+
+        <section class="view results-view" id="results" aria-labelledby="results-title" hidden>
+          <div class="results-card">
+            <p class="eyebrow"><span class="eyebrow-line"></span> THAT’S A WRAP</p>
+            <div class="score-orbit" aria-hidden="true"><span class="score-spark">✦</span></div>
+            <p class="results-kicker">YOUR QUIZ SCORE</p>
+            <h1 id="results-title"><span id="final-score">0</span><span class="score-total"> / 3</span></h1>
+            <p class="percentage" id="percentage">0%</p>
+            <p class="performance" id="performance"></p>
+            <p class="results-detail">Thanks for giving it a go. Every question is a chance to learn something new.</p>
+            <button class="button button-primary" id="play-again" type="button">
+              Play again <span class="button-arrow" aria-hidden="true">↻</span>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>MADE FOR THE LOVE OF LEARNING</span>
+        <span class="footer-spark" aria-hidden="true">✦</span>
+        <span>ONE QUESTION AT A TIME</span>
+      </footer>
+    </div>
+  </body>
+</html>
